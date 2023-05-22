@@ -1,0 +1,13 @@
+# /usr/lib/systemd/system/http-fortune.service
+[Unit]
+Description=Fortune http server using unix socket
+After=network.target
+
+[Service]
+User=http
+ExecStart=/usr/bin/lua /srv/http/http-fortune/server.lua
+Environment=LUA_PATH="/srv/http/http-fortune/?.lua;;"
+Type=simple
+
+[Install]
+WantedBy=default.target
