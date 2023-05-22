@@ -2,6 +2,8 @@
 
 Simple fortune delivery service.
 
+Http server is meant to be coupled with a reverse-proxy (e.g. Nginx) through a UNIX Socket.
+
 ---
 
 ## Dependancies
