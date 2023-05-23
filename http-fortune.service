@@ -5,6 +5,7 @@ After=network.target
 
 [Service]
 User=http
+Group=http
 ExecStart=/usr/bin/lua /srv/http/http-fortune/server.lua
 Environment=LUA_PATH="/srv/http/http-fortune/?.lua;;"
 Type=simple
